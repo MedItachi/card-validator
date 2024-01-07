@@ -6,12 +6,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="cards")
+@Table(name = "cards")
 public class Card {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +21,7 @@ public class Card {
 	private String cvc;
 	@ManyToOne
 	private User user;
-	
+
 	public Card() {
 		// TODO Auto-generated constructor stub
 	}
@@ -56,11 +55,11 @@ public class Card {
 	public void setCvc(String cvc) {
 		this.cvc = cvc;
 	}
-	
+
 	public String getCardNumber() {
 		return cardNumber;
 	}
-	
+
 	public void setCardNumber(String cardNumber) {
 		this.cardNumber = cardNumber;
 	}
@@ -68,8 +67,6 @@ public class Card {
 	public int getId() {
 		return id;
 	}
-	
-	
 
 	public User getUser() {
 		return user;
@@ -83,7 +80,6 @@ public class Card {
 	public String toString() {
 		return "Card [id=" + id + ", fullName=" + fullName + ", expirationDate=" + expirationDate + ", cardNumber="
 				+ cardNumber + ", cvc=" + cvc + "]";
-	}	
-	
-	
+	}
+
 }
