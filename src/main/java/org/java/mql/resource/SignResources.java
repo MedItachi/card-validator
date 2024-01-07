@@ -84,9 +84,4 @@ public class SignResources {
 		}
 	}
 
-	@GET
-	public ResponseEntity test() {
-		return ResponseEntity.ok("test");
-	}
-
 }
