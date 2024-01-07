@@ -1,0 +1,17 @@
+def mvnHome = tool 'Maven'
+def javaHome = tool 'JDK17'
+
+node {
+    checkout scm
+
+    def mavenHome = "${mvnHome}/bin"
+    def javaBin = "${javaHome}/bin"
+
+    stage('Build') {
+        sh "${mavenHome}/mvn clean install"
+    }
+
+    stage('Deploy') {
+        sh "java -jar target/cardvalidation-1.0.0.jar"
+    }
+}
