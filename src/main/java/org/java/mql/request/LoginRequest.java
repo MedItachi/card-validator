@@ -3,9 +3,8 @@ package org.java.mql.request;
 public class LoginRequest {
 	private String username;
 	private String password;
-	
+
 	public LoginRequest() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public LoginRequest(String username, String password) {
@@ -29,7 +28,5 @@ public class LoginRequest {
 	public void setPassword(String token) {
 		this.password = token;
 	}
-	
-	
 
 }
