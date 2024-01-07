@@ -18,6 +18,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 
 @Path("/auth")
@@ -81,6 +82,11 @@ public class SignResources {
 			ErrorReponse errorResponse = new ErrorReponse(HttpStatus.BAD_REQUEST, e.getMessage());
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
 		}
+	}
+
+	@GET
+	public ResponseEntity test() {
+		return ResponseEntity.ok("test");
 	}
 
 }
