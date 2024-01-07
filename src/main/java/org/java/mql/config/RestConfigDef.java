@@ -1,13 +1,12 @@
 package org.java.mql.config;
 
 import org.glassfish.jersey.server.ResourceConfig;
-import org.java.mql.resource.CardResources;
 import org.springframework.stereotype.Component;
 
 @Component
-public class RestConfig extends ResourceConfig {
+public class RestConfigDef extends ResourceConfig {
 
-	public RestConfig() {
+	public RestConfigDef() {
 		packages("org.java.mql");
 	}
 
